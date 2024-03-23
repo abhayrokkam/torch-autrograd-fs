@@ -18,8 +18,8 @@ class Value:
         val = Value(sum, _op = '+', _prev=(self, other))
         
         def _backward():
-            self.grad = val.grad
-            other.grad = val.grad
+            self.grad += val.grad
+            other.grad += val.grad
         val._backward = _backward
         
         return val
@@ -29,8 +29,8 @@ class Value:
         val = Value(prod, _op = '*', _prev=(self, other))
         
         def _backward():
-            self.grad = other.data * val.grad
-            other.grad = self.data * val.grad
+            self.grad += other.data * val.grad
+            other.grad += self.data * val.grad
         val._backward = _backward
         
         return val
@@ -40,11 +40,12 @@ class Value:
         val = Value(res, _op = 'tanh', _prev = (self, ))
         
         def _backward():
-            self.grad = (1 - res**2) * val.grad
+            self.grad += (1 - res**2) * val.grad
         val._backward = _backward
         
         return val
     
+    # Function which back propogates from the given point and sets the gradients
     def back_prop(self):
         final_to_initial = []
         
