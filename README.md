@@ -37,3 +37,9 @@ Learning Resource: [LINK](https://youtu.be/VMj-3S1tku0?si=qfz9OuDRKSzVn2nY)
 - All the predictions of the model are stored in a list. This is due to the fix mentioned in the above section regarding the potential error.
 - The `Value` class had an addition of a reverse-subtract function.
 - Loss value is not going too low. Pretty bad predictions even after gradient descent.
+
+## Building a Training Flow
+- Important information about setting zero grad.
+- I was wondering why the loss is not reaching zero irrespective of the learning rate.
+- Found the culprit in the form of `setting zero grad for parameters` after Mr. Andrej Karpathy mentioned it at the end of the video.
+- Training process can be simply broken into three stages - Forward Pass, Backward Pass and Gradient Descent.
