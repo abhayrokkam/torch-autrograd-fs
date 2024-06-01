@@ -28,5 +28,12 @@ Learning Resource: [LINK](https://youtu.be/VMj-3S1tku0?si=qfz9OuDRKSzVn2nY)
 
 ## Building Neurons, Layers and Multi-layer Perceptrons
 - Built the fundamental classes for neurons, layers and multi-layer perceptrons.
-- Saw a potential error for [ object of type int has no len() ] during the output of 'Layers' class.
+- Saw a potential error for [ object of type int has no len() ] during the output of `Layers` class.
+- The above error would occur if there is a flow from one layer with a single neuron to another layer.
 - Surprised at the simplicity of these classes. Very excited to continue with this project.
+
+## Training the MLP on Dataset
+- Creating an example dataset and calculating predictions using the MLP model.
+- All the predictions of the model are stored in a list. This is due to the fix mentioned in the above section regarding the potential error.
+- The `Value` class had an addition of a reverse-subtract function.
+- Loss value is not going too low. Pretty bad predictions even after gradient descent.

@@ -49,6 +49,9 @@ class Value:
     def __sub__(self, other):
         return self + (-other)
     
+    def __rsub__(self, other):
+        return self + (-other)
+    
     def __pow__(self, other):
         assert isinstance(other, (int, float)) # only int, float values are supported
         res = self.data ** other
