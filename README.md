@@ -1,4 +1,4 @@
-# From Scratch: Neural Networks and Back Propogation
+# From Scratch: Neural Networks and Back Propogation (torch.autograd)
 
 Learning Resource: [LINK](https://youtu.be/VMj-3S1tku0?si=qfz9OuDRKSzVn2nY)
 
